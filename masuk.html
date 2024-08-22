@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk - DevSchool</title>
+  <link rel="stylesheet" href="/styles/masuk.css">
+  <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="assets/A.png" alt="DevSchool Logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html#program">Program Pelatihan</a></li>
+          <li><a href="index.html#informasi">Informasi Pelatihan</a></li>
+          <li><a href="index.html#berita">Berita dan Artikel</a></li>
+          <li><a href="index.html#galeri">Galeri</a></li>
+          <li><a href="index.html#testimonial">Testimonial</a></li>
+          <li><a href="index.html#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="masuk.html"><button class="btn-masuk">Masuk</button></a>
+        <a href="daftar.html"><button class="btn-daftar">Daftar</button></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Masuk Section -->
+  <section id="masuk">
+    <div class="form-container">
+      <h2>Masuk ke DevSchool</h2>
+      <form action="#" method="post">
+        <div class="input-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Alamat Email" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Kata Sandi:</label>
+          <input type="password" id="password" name="password" placeholder="Masukkan Kata Sandi" required />
+        </div>
+        <input type="submit" value="Masuk">
+      </form>
+      <p class="or-divider">atau</p>
+      <button class="btn-google">
+        <img src="assets/google.png" alt="Google Icon" /> Masuk dengan Google
+      </button>
+      <p class="register-link">Belum punya akun? <a href="daftar.html">Daftar di sini</a></p>
+      <hr>
+            <p class="terms-conditions">
+                Dengan melakukan pendaftaran, Anda setuju dengan <a href="#">syarat & ketentuan DevSchool</a>.<br>
+                This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+            </p>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 DevSchool. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
