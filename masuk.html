@@ -72,23 +72,23 @@
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(event) {
       event.preventDefault(); // Prevent form submission
-
+  
       const email = document.getElementById('email').value;
       const password = document.getElementById('password').value;
       const errorMessage = document.getElementById('error-message');
-
-      fetch('users.json')
-        .then(response => response.json())
-        .then(users => {
-          const user = users.find(user => user.email === email && user.password === password);
-          if (user) {
-            window.location.href = 'dashboard.html';
-          } else {
-            errorMessage.textContent = 'Email atau kata sandi salah. Silakan coba lagi.';
-          }
-        })
-        .catch(error => console.error('Error:', error));
+  
+      // Retrieve existing users from localStorage
+      const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+  
+      // Check if user exists and password matches
+      const user = existingUsers.find(user => user.email === email && user.password === password);
+      if (user) {
+        window.location.href = 'dashboard.html';
+      } else {
+        errorMessage.textContent = 'Email atau kata sandi salah. Silakan coba lagi.';
+      }
     });
   </script>
+  
 </body>
 </html>

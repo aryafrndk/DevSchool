@@ -76,5 +76,41 @@
     <footer>
         <p>&copy; 2024 DevSchool. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Simulasi penyimpanan pengguna di localStorage
+        const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
+      
+        document.querySelector('form').addEventListener('submit', function (e) {
+          e.preventDefault();
+      
+          const nama = document.querySelector('#nama').value;
+          const email = document.querySelector('#email').value;
+          const password = document.querySelector('#password').value;
+          const konfirmasiPassword = document.querySelector('#konfirmasi-password').value;
+      
+          // Cek apakah password dan konfirmasi password cocok
+          if (password !== konfirmasiPassword) {
+            alert('Kata sandi dan konfirmasi kata sandi tidak cocok.');
+            return;
+          }
+      
+          // Cek apakah email sudah digunakan
+          const isEmailUsed = existingUsers.some(user => user.email === email);
+          if (isEmailUsed) {
+            alert('Email sudah digunakan.');
+            return;
+          }
+      
+          // Jika validasi berhasil, simpan pengguna baru
+          const newUser = { nama, email, password };
+          existingUsers.push(newUser);
+          localStorage.setItem('users', JSON.stringify(existingUsers));
+      
+          alert('Pendaftaran berhasil!');
+          window.location.href = 'masuk.html';
+        });
+      </script>
+      
 </body>
 </html>

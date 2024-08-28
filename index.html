@@ -162,23 +162,19 @@
     <!-- Galeri Foto dan Video dan Audio -->
     <section id="galeri">
       <h2>Galeri Foto</h2>
-      <figure>
-        <img
-          src="assets/2.jpg"
-          alt="Foto 1"
-          style="width: 300px; height: 200px"
-        />
-        <figcaption>Pelatihan Full Stack Development</figcaption>
-      </figure>
-      <figure>
-        <img
-          src="assets/1.jpeg"
-          alt="Foto 2"
-          style="width: 300px; height: 200px"
-        />
-        <figcaption>Pelatihan Data Science</figcaption>
-      </figure>
-    </section>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="assets/2.jpg" class="slide-image" />
+          <figcaption>Pelatihan Full Stack Development</figcaption>
+        </div>
+        <div class="mySlides fade">
+          <img src="assets/1.jpeg" class="slide-image" />
+          <figcaption>Pelatihan Data Science</figcaption>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+    </section>    
 
     <!-- Testimonial -->
     <section id="testimonial">
@@ -259,5 +255,28 @@
     <footer>
       <p>&copy; 2024 DevSchool. Hak Cipta Dilindungi.</p>
     </footer>
+
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 7000); // Ubah gambar setiap 2 detik
+      }
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+    </script>
   </body>
 </html>
