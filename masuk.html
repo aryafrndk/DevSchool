@@ -38,7 +38,7 @@
   <section id="masuk">
     <div class="form-container">
       <h2>Masuk ke DevSchool</h2>
-      <form action="#" method="post">
+      <form id="loginForm">
         <div class="input-group">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" placeholder="Alamat Email" required />
@@ -47,6 +47,7 @@
           <label for="password">Kata Sandi:</label>
           <input type="password" id="password" name="password" placeholder="Masukkan Kata Sandi" required />
         </div>
+        <div id="error-message" class="error-message"></div>
         <input type="submit" value="Masuk">
       </form>
       <p class="or-divider">atau</p>
@@ -55,10 +56,10 @@
       </button>
       <p class="register-link">Belum punya akun? <a href="daftar.html">Daftar di sini</a></p>
       <hr>
-            <p class="terms-conditions">
-                Dengan melakukan pendaftaran, Anda setuju dengan <a href="#">syarat & ketentuan DevSchool</a>.<br>
-                This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
-            </p>
+      <p class="terms-conditions">
+          Dengan melakukan pendaftaran, Anda setuju dengan <a href="#">syarat & ketentuan DevSchool</a>.<br>
+          This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
+      </p>
     </div>
   </section>
 
@@ -66,5 +67,28 @@
   <footer>
     <p>&copy; 2024 DevSchool. All Rights Reserved.</p>
   </footer>
+
+  <!-- Script for Validation -->
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const errorMessage = document.getElementById('error-message');
+
+      fetch('users.json')
+        .then(response => response.json())
+        .then(users => {
+          const user = users.find(user => user.email === email && user.password === password);
+          if (user) {
+            window.location.href = 'dashboard.html';
+          } else {
+            errorMessage.textContent = 'Email atau kata sandi salah. Silakan coba lagi.';
+          }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+  </script>
 </body>
 </html>
