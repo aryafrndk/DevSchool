@@ -32,7 +32,6 @@ header {
   height: 50px;
 }
 
-
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -418,7 +417,6 @@ header nav ul li a:hover {
   color: #555;
 }
   
-
 /* Testimonial Section */
 #testimonial {
   background-color: #f4f4f4;
@@ -426,6 +424,7 @@ header nav ul li a:hover {
   text-align: center;
   color: #333;
   font-family: 'Poppins', sans-serif;
+  position: relative;
 }
 
 #testimonial h2 {
@@ -444,10 +443,20 @@ header nav ul li a:hover {
   margin: 10px auto 0;
 }
 
-#testimonial div {
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 33.3333%;
+  box-sizing: border-box;
   display: inline-block;
-  width: 300px;
-  margin: 20px;
   padding: 20px;
   background: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -455,7 +464,7 @@ header nav ul li a:hover {
   vertical-align: top;
 }
 
-#testimonial img {
+.carousel-image {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -463,7 +472,7 @@ header nav ul li a:hover {
   margin: 0 auto 15px;
 }
 
-#testimonial blockquote {
+blockquote {
   margin: 0;
   padding: 0;
   font-style: italic;
@@ -471,11 +480,32 @@ header nav ul li a:hover {
   color: #555;
 }
 
-#testimonial #nama {
+#nama {
   margin-top: 10px;
   font-size: 0.9rem;
   color: #333;
   text-align: right;
+}
+
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
 }
 
 /* Kontak Section */
@@ -564,7 +594,6 @@ header nav ul li a:hover {
   text-decoration: underline;
 }
 
-
 /* Footer */
 footer {
   background-color: #333;
@@ -624,7 +653,7 @@ footer p {
 }
 
 .next {
-  right: 10px;
+  right: 10px; 
 }
 
 .prev {

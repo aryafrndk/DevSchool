@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevSchool Indonesia</title>
@@ -9,108 +9,132 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-</head>
-<body>
+  </head>
+  <body>
+    
     <!-- Header Section -->
     <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/A.png" alt="DevSchool Logo" />
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="index.html#program ">Program Pelatihan</a></li>
-                    <li><a href="index.html#informasi">Informasi Pelatihan</a></li>
-                    <li><a href="index.html#berita">Berita dan Artikel</a></li>
-                    <li><a href="index.html#galeri">Galeri</a></li>
-                    <li><a href="index.html#testimonial">Testimonial</a></li>
-                    <li><a href="index.html#kontak">Kontak</a></li>
-                </ul>
-            </nav>
-            <div class="auth-buttons">
-                <a href="masuk.html"><button class="btn-masuk">Masuk</button></a>
-                <a href="daftar.html"><button class="btn-daftar">Daftar</button></a>
-            </div>
+      <div class="nav-container">
+        <a href="index.html" class="logo">
+          <img src="assets/A.png" alt="DevSchool Logo" />
+        </a>
+        <nav>
+          <ul>
+            <li><a href="index.html#program ">Program Pelatihan</a></li>
+            <li><a href="index.html#informasi">Informasi Pelatihan</a></li>
+            <li><a href="index.html#berita">Berita dan Artikel</a></li>
+            <li><a href="index.html#galeri">Galeri</a></li>
+            <li><a href="index.html#testimonial">Testimonial</a></li>
+            <li><a href="index.html#kontak">Kontak</a></li>
+          </ul>
+        </nav>
+        <div class="auth-buttons">
+          <a href="masuk.html"><button class="btn-masuk">Masuk</button></a>
+          <a href="daftar.html"><button class="btn-daftar">Daftar</button></a>
         </div>
+      </div>
     </header>
 
     <!-- Daftar Section -->
     <section id="daftar">
-        <div class="form-container">
-            <h2>Daftar ke DevSchool</h2>
-            <form action="#" method="post">
-                <div class="input-group">
-                    <label for="nama">Nama Lengkap:</label>
-                    <input type="text" id="nama" name="nama" placeholder="Nama Lengkap" />
-                </div>
-                <div class="input-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Alamat Email" required />
-                </div>
-                <div class="input-group">
-                    <label for="password">Kata Sandi:</label>
-                    <input type="password" id="password" name="password" placeholder="Masukkan Kata Sandi Baru" required />
-                </div>
-                <div class="input-group">
-                    <label for="konfirmasi-password">Konfirmasi Kata Sandi:</label>
-                    <input type="password" id="konfirmasi-password" name="konfirmasi-password" placeholder="Ulangi Kata Sandi Baru" required />
-                </div>
-                <input type="submit" value="Daftar" />
-            </form>
-            <p class="or-divider">atau</p>
-            <button class="btn-google">
-                <img src="assets/google.png" alt="Google Icon" /> Daftar dengan Google
-            </button>
-            <p class="login-link">
-                Sudah punya akun? <a href="masuk.html">Masuk di sini</a>
-            </p>
-            <hr>
-            <p class="terms-conditions">
-                Dengan melakukan pendaftaran, Anda setuju dengan <a href="#">syarat & ketentuan DevSchool</a>.<br>
-                This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.
-            </p>
-        </div>
+      <div class="form-container">
+        <h2>Daftar ke DevSchool</h2>
+        <form action="#" method="post">
+          <div class="input-group">
+            <label for="nama">Nama Lengkap:</label>
+            <input
+              type="text"
+              id="nama"
+              name="nama"
+              placeholder="Nama Lengkap"
+            />
+          </div>
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Alamat Email"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="password">Kata Sandi:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Masukkan Kata Sandi Baru"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="konfirmasi-password">Konfirmasi Kata Sandi:</label>
+            <input
+              type="password"
+              id="konfirmasi-password"
+              name="konfirmasi-password"
+              placeholder="Ulangi Kata Sandi Baru"
+              required
+            />
+          </div>
+          <input type="submit" value="Daftar" />
+        </form>
+        <p class="or-divider">atau</p>
+        <button class="btn-google">
+          <img src="assets/google.png" alt="Google Icon" /> Daftar dengan Google
+        </button>
+        <p class="login-link">
+          Sudah punya akun? <a href="masuk.html">Masuk di sini</a>
+        </p>
+        <hr />
+        <p class="terms-conditions">
+          Dengan melakukan pendaftaran, Anda setuju dengan
+          <a href="#">syarat & ketentuan DevSchool</a>.<br />
+          This site is protected by reCAPTCHA and the Google
+          <a href="#">Privacy Policy</a> and
+          <a href="#">Terms of Service</a> apply.
+        </p>
+      </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2024 DevSchool. All Rights Reserved.</p>
+      <p>&copy; 2024 DevSchool. All Rights Reserved.</p>
     </footer>
 
     <script>
-        // Simulasi penyimpanan pengguna di localStorage
-        const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
-      
-        document.querySelector('form').addEventListener('submit', function (e) {
-          e.preventDefault();
-      
-          const nama = document.querySelector('#nama').value;
-          const email = document.querySelector('#email').value;
-          const password = document.querySelector('#password').value;
-          const konfirmasiPassword = document.querySelector('#konfirmasi-password').value;
-      
-          // Cek apakah password dan konfirmasi password cocok
-          if (password !== konfirmasiPassword) {
-            alert('Kata sandi dan konfirmasi kata sandi tidak cocok.');
-            return;
-          }
-      
-          // Cek apakah email sudah digunakan
-          const isEmailUsed = existingUsers.some(user => user.email === email);
-          if (isEmailUsed) {
-            alert('Email sudah digunakan.');
-            return;
-          }
-      
-          // Jika validasi berhasil, simpan pengguna baru
-          const newUser = { nama, email, password };
-          existingUsers.push(newUser);
-          localStorage.setItem('users', JSON.stringify(existingUsers));
-      
-          alert('Pendaftaran berhasil!');
-          window.location.href = 'masuk.html';
-        });
-      </script>
-      
-</body>
+      const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nama = document.querySelector("#nama").value;
+        const email = document.querySelector("#email").value;
+        const password = document.querySelector("#password").value;
+        const konfirmasiPassword = document.querySelector(
+          "#konfirmasi-password"
+        ).value;
+
+        if (password !== konfirmasiPassword) {
+          alert("Kata sandi dan konfirmasi kata sandi tidak cocok.");
+          return;
+        }
+
+        const isEmailUsed = existingUsers.some((user) => user.email === email);
+        if (isEmailUsed) {
+          alert("Email sudah digunakan.");
+          return;
+        }
+
+        const newUser = { nama, email, password };
+        existingUsers.push(newUser);
+        localStorage.setItem("users", JSON.stringify(existingUsers));
+
+        alert("Pendaftaran berhasil!");
+        window.location.href = "masuk.html";
+      });
+    </script>
+  </body>
 </html>

@@ -83,7 +83,7 @@
       // Check if user exists and password matches
       const user = existingUsers.find(user => user.email === email && user.password === password);
       if (user) {
-        window.location.href = 'dashboard.html';
+        window.location.href = 'index.html';
       } else {
         errorMessage.textContent = 'Email atau kata sandi salah. Silakan coba lagi.';
       }

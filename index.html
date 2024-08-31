@@ -174,56 +174,111 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-    </section>    
+    </section>
 
     <!-- Testimonial -->
     <section id="testimonial">
       <h2>Testimonial</h2>
-      <div>
-        <img
-          src="assets/people-2.jpg"
-          alt="Foto Budi Santoso"
-          style="width: 150px; height: 150px"
-        />
-        <blockquote>
-          <p>
-            "Pelatihan di DevSchool sangat membantu saya dalam memahami konsep
-            software engineering dengan lebih mendalam. Pengajarnya
-            berpengalaman dan materinya sangat relevan dengan industri saat
-            ini."
-          </p>
-          <p id="nama">- Budi Santoso, Full Stack Developer</p>
-        </blockquote>
-      </div>
-      <div>
-        <img
-          src="assets/people-1.jpg"
-          alt="Foto Siti Aisyah"
-          style="width: 150px; height: 150px"
-        />
-        <blockquote>
-          <p>
-            "Saya mengikuti program Data Science dan Machine Learning di
-            DevSchool. Programnya sangat komprehensif dan membantu saya
-            mendapatkan pekerjaan di perusahaan teknologi ternama."
-          </p>
-          <p id="nama">- Siti Aisyah, Data Scientist</p>
-        </blockquote>
-      </div>
-      <div>
-        <img
-          src="assets/people-3.jpg"
-          alt="Foto Ahmad Yani"
-          style="width: 150px; height: 150px"
-        />
-        <blockquote>
-          <p>
-            "DevSchool menyediakan fasilitas yang sangat mendukung proses
-            belajar. Saya belajar banyak tentang mobile app development, dan
-            sekarang saya berhasil merilis aplikasi pertama saya di Play Store."
-          </p>
-          <p id="nama">- Ahmad Yani, Mobile App Developer</p>
-        </blockquote>
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-slide">
+            <img
+              src="assets/people-2.jpg"
+              alt="Foto Budi Santoso"
+              class="carousel-image"
+            />
+            <blockquote>
+              <p>
+                "Pelatihan di DevSchool sangat membantu saya dalam memahami
+                konsep software engineering dengan lebih mendalam. Pengajarnya
+                berpengalaman dan materinya sangat relevan dengan industri saat
+                ini."
+              </p>
+              <p id="nama">- Budi Santoso, Full Stack Developer</p>
+            </blockquote>
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="assets/people-1.jpg"
+              alt="Foto Siti Aisyah"
+              class="carousel-image"
+            />
+            <blockquote>
+              <p>
+                "Saya mengikuti program Data Science dan Machine Learning di
+                DevSchool. Programnya sangat komprehensif dan membantu saya
+                mendapatkan pekerjaan di perusahaan teknologi ternama."
+              </p>
+              <p id="nama">- Siti Aisyah, Data Scientist</p>
+            </blockquote>
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="assets/people-3.jpg"
+              alt="Foto Ahmad Yani"
+              class="carousel-image"
+            />
+            <blockquote>
+              <p>
+                "DevSchool menyediakan fasilitas yang sangat mendukung proses
+                belajar. Saya belajar banyak tentang mobile app development, dan
+                sekarang saya berhasil merilis aplikasi pertama saya di Play
+                Store."
+              </p>
+              <p id="nama">- Ahmad Yani, Mobile App Developer</p>
+            </blockquote>
+          </div>
+          <!-- Duplikasi slide untuk loop -->
+          <div class="carousel-slide">
+            <img
+              src="assets/people-2.jpg"
+              alt="Foto Budi Santoso"
+              class="carousel-image"
+            />
+            <blockquote>
+              <p>
+                "Pelatihan di DevSchool sangat membantu saya dalam memahami
+                konsep software engineering dengan lebih mendalam. Pengajarnya
+                berpengalaman dan materinya sangat relevan dengan industri saat
+                ini."
+              </p>
+              <p id="nama">- Budi Santoso, Full Stack Developer</p>
+            </blockquote>
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="assets/people-1.jpg"
+              alt="Foto Siti Aisyah"
+              class="carousel-image"
+            />
+            <blockquote>
+              <p>
+                "Saya mengikuti program Data Science dan Machine Learning di
+                DevSchool. Programnya sangat komprehensif dan membantu saya
+                mendapatkan pekerjaan di perusahaan teknologi ternama."
+              </p>
+              <p id="nama">- Siti Aisyah, Data Scientist</p>
+            </blockquote>
+          </div>
+          <div class="carousel-slide">
+            <img
+              src="assets/people-3.jpg"
+              alt="Foto Ahmad Yani"
+              class="carousel-image"
+            />
+            <blockquote>
+              <p>
+                "DevSchool menyediakan fasilitas yang sangat mendukung proses
+                belajar. Saya belajar banyak tentang mobile app development, dan
+                sekarang saya berhasil merilis aplikasi pertama saya di Play
+                Store."
+              </p>
+              <p id="nama">- Ahmad Yani, Mobile App Developer</p>
+            </blockquote>
+          </div>
+        </div>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
       </div>
     </section>
 
@@ -271,12 +326,32 @@
           slideIndex = 1;
         }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 7000); // Ubah gambar setiap 2 detik
+        setTimeout(showSlides, 7000); 
       }
 
       function plusSlides(n) {
         showSlides((slideIndex += n));
       }
+
+      let currentSlide = 0;
+
+      function moveSlide(step) {
+        const slides = document.querySelectorAll(".carousel-slide");
+        const totalSlides = slides.length;
+        const slidesToShow = 3; 
+        const maxSlides = totalSlides - slidesToShow;
+
+        currentSlide =
+          (currentSlide + step + (maxSlides + 1)) % (maxSlides + 1);
+        const offset = -currentSlide * (100 / slidesToShow);
+        document.querySelector(
+          ".carousel"
+        ).style.transform = `translateX(${offset}%)`;
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        moveSlide(0);
+      });
     </script>
   </body>
 </html>
