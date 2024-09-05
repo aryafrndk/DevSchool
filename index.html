@@ -53,32 +53,78 @@
       </ul>
     </section>
 
-    <!-- Program Pelatihan -->
-    <section id="program">
-      <h2>Program Pelatihan</h2>
-      <ol>
-        <li>
-          Full Stack Web Development
-          <ul>
-            <li>Durasi: 12 Minggu</li>
-            <li>Level: Intermediate</li>
-          </ul>
-        </li>
-        <li>
-          Data Science dan Machine Learning
-          <ul>
-            <li>Durasi: 14 Minggu</li>
-            <li>Level: Advanced</li>
-          </ul>
-        </li>
-        <li>
-          Mobile App Development
-          <ul>
-            <li>Durasi: 10 Minggu</li>
-            <li>Level: Beginner</li>
-          </ul>
-        </li>
-      </ol>
+    <!-- Program Pelatihan Section -->
+    <section id="program" class="program-section">
+      <h2 class="program-title">Pilihan Program Pelatihan</h2>
+      <p class="program-description">
+        Pilih program pelatihan yang sesuai dengan kebutuhanmu.
+      </p>
+      <div class="program-cards">
+        <div class="card">
+          <img
+            src="https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Android_Developer.jpg"
+            class="card-img-top"
+            alt="Android Developer"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Android Developer</h5>
+            <p class="card-text">DevSchool</p>
+            <a href="#" class="btn btn-primary">Lihat Detail Proyek</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Become_a_Front_End_Developer.jpg"
+            class="card-img-top"
+            alt="Front-End Developer"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Front-End Developer</h5>
+            <p class="card-text">DevSchool</p>
+            <a href="#" class="btn btn-primary">Lihat Detail Proyek</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgieFCETcJfdQyFGDdZwbG1B3t8UrqFYltQ&s"
+            class="card-img-top"
+            alt="Back-end Developer"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Back-end Developer</h5>
+            <p class="card-text">DevSchool</p>
+            <a href="#" class="btn btn-primary">Lihat Detail Proyek</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Skills_Required_to_Become_an_iOS_Developer.jpg"
+            class="card-img-top"
+            alt="IOS"
+          />
+          <div class="card-body">
+            <h5 class="card-title">IOS Developer</h5>
+            <p class="card-text">DevSchool</p>
+            <a href="#" class="btn btn-primary">Lihat Detail Proyek</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://www.discoverdatascience.org/wp-content/uploads/2023/10/programmer-using-ai.jpg"
+            class="card-img-top"
+            alt="Machine Learning Engineer"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Machine Learning Engineer</h5>
+            <p class="card-text">DevSchool</p>
+            <a href="#" class="btn btn-primary">Lihat Detail Proyek</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Informasi Pelatihan -->
@@ -294,21 +340,76 @@
         <textarea id="pesan" name="pesan"></textarea><br />
         <input type="submit" value="Kirim" />
       </form>
-      <address>
-        <p>
-          <strong>Alamat:</strong> Jl. Teknologi No. 456, Bandung, Indonesia
-        </p>
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:info@devschool.com">info@devschool.com</a>
-        </p>
-        <p><strong>Telepon:</strong> +62 21 7890 1234</p>
-      </address>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>&copy; 2024 DevSchool. Hak Cipta Dilindungi.</p>
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>Tentang DevSchool</h3>
+          <p>
+            DevSchool adalah platform pembelajaran daring yang bertujuan untuk
+            mengembangkan keterampilan software engineering. Kami menawarkan
+            berbagai program pelatihan untuk membantu Anda menjadi developer
+            yang handal.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Menu</h3>
+          <ul>
+            <li><a href="index.html#program">Program Pelatihan</a></li>
+            <li><a href="index.html#informasi">Informasi Pelatihan</a></li>
+            <li><a href="index.html#berita">Berita dan Artikel</a></li>
+            <li><a href="index.html#galeri">Galeri</a></li>
+            <li><a href="index.html#testimonial">Testimonial</a></li>
+            <li><a href="index.html#kontak">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h3>Ikuti Kami</h3>
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="assets/facebook.svg" alt="Facebook" /> Facebook</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="assets/instagram.svg" alt="Instagram" /> Instagram</a
+              >
+            </li>
+            <li>
+              <a href="#"><img src="assets/x.svg" alt="X" /> X</a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="assets/linkedin.svg" alt="LinkedIn" /> LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Address Section -->
+        <div class="footer-address">
+          <h3>Kontak Kami</h3>
+          <address>
+            <p>
+              <strong>Alamat:</strong> Jl. Teknologi No. 456, Bandung, Indonesia
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:info@devschool.com">info@devschool.com</a>
+            </p>
+            <p><strong>Telepon:</strong> +62 21 7890 1234</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2024 DevSchool. All Rights Reserved.</p>
+      </div>
     </footer>
 
     <script>
@@ -326,7 +427,7 @@
           slideIndex = 1;
         }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 7000); 
+        setTimeout(showSlides, 7000);
       }
 
       function plusSlides(n) {
@@ -338,7 +439,7 @@
       function moveSlide(step) {
         const slides = document.querySelectorAll(".carousel-slide");
         const totalSlides = slides.length;
-        const slidesToShow = 3; 
+        const slidesToShow = 3;
         const maxSlides = totalSlides - slidesToShow;
 
         currentSlide =
