@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/program-detail.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -120,5 +120,65 @@
         <p>&copy; 2024 DevSchool. All Rights Reserved.</p>
       </div>
     </footer>
+
+    <script>
+      // Fetch programs.json data
+      async function fetchPrograms() {
+        const response = await fetch("data/programs.json");
+        const programs = await response.json();
+        return programs.programs;
+      }
+
+      // Display program detail on program-detail.html
+      async function displayProgramDetail() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const programId = urlParams.get("id");
+        const programs = await fetchPrograms();
+
+        const program = programs.find((prog) => prog.id == programId);
+
+        if (program) {
+          document.getElementById("program-img").src = program.imageUrl;
+          document.getElementById("program-img").alt = program.altText;
+          document.getElementById("program-title").textContent = program.title;
+          document.getElementById("program-description").textContent =
+            program.description;
+          document.getElementById("program-details").textContent =
+            program.details;
+        } else {
+          document.getElementById("program-title").textContent =
+            "Program not found.";
+        }
+      }
+
+      // Display programs on index.html
+      async function displayPrograms() {
+        const programs = await fetchPrograms();
+        const programCardsContainer = document.getElementById("programCards");
+
+        programs.forEach((program) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          card.innerHTML = `
+      <img src="${program.imageUrl}" class="card-img-top" alt="${program.altText}" />
+      <div class="card-body">
+        <h5 class="card-title">${program.title}</h5>
+        <p class="card-text">${program.description}</p>
+        <a href="${program.buttonUrl}" class="btn btn-primary">${program.buttonText}</a>
+      </div>
+    `;
+
+          programCardsContainer.appendChild(card);
+        });
+      }
+
+      // Check if we are on the program-detail.html page
+      if (window.location.pathname.includes("program-detail.html")) {
+        displayProgramDetail();
+      } else {
+        displayPrograms();
+      }
+    </script>
   </body>
 </html>

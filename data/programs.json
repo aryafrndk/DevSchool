@@ -17,7 +17,8 @@
         "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Become_a_Front_End_Developer.jpg",
         "altText": "Front-End Developer",
         "buttonText": "Lihat Detail Proyek",
-        "buttonUrl": "#"
+        "buttonUrl": "program-detail.html?id=2",
+        "details": "Program ini fokus pada pengembangan antarmuka pengguna untuk web. Anda akan mempelajari HTML, CSS, JavaScript, dan framework modern seperti React. Program ini juga mencakup desain responsif dan pengujian UI."
       },
       {
         "id": 3,
@@ -26,7 +27,8 @@
         "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgieFCETcJfdQyFGDdZwbG1B3t8UrqFYltQ&s",
         "altText": "Back-end Developer",
         "buttonText": "Lihat Detail Proyek",
-        "buttonUrl": "#"
+        "buttonUrl": "program-detail.html?id=3",
+        "details": "Pelatihan ini mencakup pengembangan sisi server, basis data, dan API. Anda akan belajar menggunakan Node.js, Express, serta database SQL dan NoSQL untuk membangun aplikasi yang skalabel."
       },
       {
         "id": 4,
@@ -35,7 +37,8 @@
         "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Skills_Required_to_Become_an_iOS_Developer.jpg",
         "altText": "IOS Developer",
         "buttonText": "Lihat Detail Proyek",
-        "buttonUrl": "#"
+        "buttonUrl": "program-detail.html?id=4",
+        "details": "Program ini memberikan pengetahuan mendalam tentang pengembangan aplikasi iOS menggunakan Swift dan Xcode. Anda akan belajar tentang antarmuka pengguna, penyimpanan data, dan distribusi aplikasi melalui App Store."
       },
       {
         "id": 5,
@@ -44,7 +47,8 @@
         "imageUrl": "https://www.discoverdatascience.org/wp-content/uploads/2023/10/programmer-using-ai.jpg",
         "altText": "Machine Learning Engineer",
         "buttonText": "Lihat Detail Proyek",
-        "buttonUrl": "#"
+        "buttonUrl": "program-detail.html?id=5",
+        "details": "Pelatihan ini fokus pada penerapan teknik pembelajaran mesin untuk memecahkan masalah dunia nyata. Anda akan mempelajari algoritma pembelajaran mesin, analisis data, dan penggunaan pustaka seperti TensorFlow dan scikit-learn."
       },
       {
         "id": 6,
@@ -53,8 +57,8 @@
         "imageUrl": "https://mmc.tirto.id/image/otf/640x0/2020/05/08/istock-1146417905_ratio-16x9.jpg",
         "altText": "Data Scientist",
         "buttonText": "Lihat Detail Proyek",
-        "buttonUrl": "#"
+        "buttonUrl": "program-detail.html?id=6",
+        "details": "Pelatihan ini dirancang untuk membekali Anda dengan keterampilan analisis data dan visualisasi. Anda akan mempelajari teknik statistik, analisis data besar, dan pembuatan laporan serta dasbor interaktif."
       }
     ]
   }
-  
