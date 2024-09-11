@@ -156,166 +156,163 @@ header nav ul li a:hover {
   transform: translateY(-5px);
 }
 
+/* Program Section */
 .program-section {
   text-align: center;
-  padding: 50px;
+  padding: 20px; /* Mengurangi padding keseluruhan */
 }
 
-.program-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: black;
-}
-
-.program-description {
-  font-size: 1rem;
-  margin-bottom: 40px;
-  color: black;
-}
-
-.program-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  width: 30%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card-img-top {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.card-body {
-  padding: 15px;
-  margin-bottom: 30px; 
-}
-
-.card-title {
-  font-size: 1.5rem;
+#program .program-title {
+  font-size: 1.8rem; /* Mengecilkan ukuran judul */
   margin-bottom: 10px;
   color: black;
 }
 
-.card-text {
-  font-size: 1rem;
+#program .program-description {
+  font-size: 0.9rem; /* Mengecilkan ukuran deskripsi */
   margin-bottom: 20px;
   color: black;
 }
 
-.btn-primary {
+#program .program-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* Mengurangi jarak antar kartu */
+}
+
+#program .card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 20%; /* Mengecilkan lebar kartu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-bottom: 10px; /* Mengurangi margin bawah kartu */
+}
+
+#program .card:hover {
+  transform: scale(1.05);
+}
+
+#program .card-img-top {
+  width: 100%;
+  height: 130px; /* Mengurangi tinggi gambar */
+  object-fit: cover;
+}
+
+#program .card-body {
+  padding: 8px; /* Mengurangi padding dalam kartu */
+  margin-bottom: 15px;
+}
+
+#program .card-title {
+  font-size: 1.1rem; /* Mengecilkan ukuran judul kartu */
+  margin-bottom: 6px;
+  color: black;
+}
+
+#program .card-text {
+  font-size: 0.85rem; /* Mengecilkan ukuran teks deskripsi */
+  margin-bottom: 10px;
+  color: black;
+}
+
+#program .btn-primary {
   background-color: white;
-  border: 2px solid black;
-  padding: 10px 30px;
+  border: 1px solid black; /* Mengurangi ketebalan border */
+  padding: 6px 18px; /* Mengecilkan padding tombol */
   border-radius: 4px;
   color: black;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+#program .btn-primary:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Responsive layout Card */
+@media (max-width: 992px) {
+  .card {
+    width: 38%; /* Mengecilkan kartu pada layar tablet besar */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Full width pada layar kecil */
+  }
+}
+
+/* Informasi Benefits Section */
+#benefits {
+  text-align: center;
+  padding: 50px 90px;
+  color: black;
+}
+
+#benefits .benefits-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#benefits .benefits-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  gap: 5px;
+  justify-items: center;
+  padding: 20px 100px;
+  margin-bottom: 40px;
+}
+
+#benefits .benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+#benefits .benefit-item i {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#benefits .benefit-item h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#benefits .benefit-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+#benefits .btn-primary {
+  background-color: #666661;
+  border: 1px solid black;
+  padding: 10px 30px;
+  color: white;
   text-transform: uppercase;
   transition: background-color 0.3s ease, color 0.3s ease;
   text-decoration: none;
   margin-bottom: 20px;
 }
 
-.btn-primary:hover {
+#benefits .btn-primary:hover {
   background-color: black; 
   color: white; 
 }
 
-/* Responsive layout Card*/
-@media (max-width: 992px) {
-  .card {
-    width: 45%;
-  }
-}
-
 @media (max-width: 768px) {
-  .card {
-    width: 100%;
+  #benefits .benefits-container {
+    grid-template-columns: 1fr; /* Satu kolom untuk layar kecil */
   }
-}
-
-/* Informasi Pelatihan Section */
-#informasi {
-  background-color: white;
-  padding: 60px 20px;
-  text-align: center;
-  color: #333;
-  font-family: "Poppins", sans-serif;
-}
-
-#informasi h2 {
-  font-size: 2.5rem;
-  color: black;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-#informasi h2::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: #333;
-  margin: 10px auto 0;
-}
-
-#informasi p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-}
-
-/* Tabel Informasi */
-#informasi table {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  border-collapse: collapse;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-#informasi table caption {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-#informasi table th,
-#informasi table td {
-  padding: 15px 20px;
-  border: 1px solid #ddd;
-  text-align: left;
-}
-
-#informasi table th {
-  background-color: #333;
-  color: #fff;
-  font-weight: 700;
-}
-
-#informasi table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#informasi table tr:hover {
-  background-color: #f8f9fa;
-}
-
-#informasi table td {
-  color: #555;
 }
 
 /* Berita dan Artikel Section */

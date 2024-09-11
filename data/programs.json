@@ -1,0 +1,59 @@
+{
+    "programs": [
+      {
+        "id": 1,
+        "title": "Android Developer",
+        "description": "DevSchool",
+        "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Android_Developer.jpg",
+        "altText": "Android Developer",
+        "buttonText": "Lihat Detail Proyek",
+        "buttonUrl": "#"
+      },
+      {
+        "id": 2,
+        "title": "Front-End Developer",
+        "description": "DevSchool",
+        "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Become_a_Front_End_Developer.jpg",
+        "altText": "Front-End Developer",
+        "buttonText": "Lihat Detail Proyek",
+        "buttonUrl": "#"
+      },
+      {
+        "id": 3,
+        "title": "Back-End Developer",
+        "description": "DevSchool",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgieFCETcJfdQyFGDdZwbG1B3t8UrqFYltQ&s",
+        "altText": "Back-end Developer",
+        "buttonText": "Lihat Detail Proyek",
+        "buttonUrl": "#"
+      },
+      {
+        "id": 4,
+        "title": "IOS Developer",
+        "description": "DevSchool",
+        "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Skills_Required_to_Become_an_iOS_Developer.jpg",
+        "altText": "IOS Developer",
+        "buttonText": "Lihat Detail Proyek",
+        "buttonUrl": "#"
+      },
+      {
+        "id": 5,
+        "title": "Machine Learning Engineer",
+        "description": "DevSchool",
+        "imageUrl": "https://www.discoverdatascience.org/wp-content/uploads/2023/10/programmer-using-ai.jpg",
+        "altText": "Machine Learning Engineer",
+        "buttonText": "Lihat Detail Proyek",
+        "buttonUrl": "#"
+      },
+      {
+        "id": 6,
+        "title": "Data Scientist",
+        "description": "DevSchool",
+        "imageUrl": "https://mmc.tirto.id/image/otf/640x0/2020/05/08/istock-1146417905_ratio-16x9.jpg",
+        "altText": "Data Scientist",
+        "buttonText": "Lihat Detail Proyek",
+        "buttonUrl": "#"
+      }
+    ]
+  }
+  
