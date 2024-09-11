@@ -7,7 +7,8 @@
         "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Android_Developer.jpg",
         "altText": "Android Developer",
         "buttonText": "Lihat Detail Proyek",
-        "buttonUrl": "#"
+        "buttonUrl": "program-detail.html?id=1",
+        "details": "Program pelatihan ini berfokus pada pengembangan aplikasi Android menggunakan Kotlin, Android Studio, dan berbagai teknologi modern."
       },
       {
         "id": 2,
