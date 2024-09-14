@@ -96,47 +96,46 @@ header nav ul li a:hover {
 }
 
 /* Program Detail Section */
-.program-detail-section {
-  padding: 50px;
-  text-align: center;
-}
-
-.program-img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
+.border-box {
+  border: 2px solid #ddd; /* Memberikan border pada tiap bagian */
+  padding: 20px;
   margin-bottom: 20px;
+  border-radius: 8px; /* Sedikit pembulatan pada sudut */
+  background-color: #f9f9f9; /* Warna latar yang lebih lembut */
 }
 
-.program-info {
-  max-width: 700px;
+.program-detail-container {
+  max-width: 800px;
   margin: 0 auto;
+  padding: 20px;
+  text-align: left;
 }
 
-.program-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.program-detail-img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin: 20px 0;
 }
 
-.program-description {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
-.program-details {
-  font-size: 1rem;
-  margin-bottom: 40px;
+li {
+  margin-bottom: 10px;
 }
 
-.btn {
-  background-color: #007bff;
-  color: white;
+.btn-primary {
+  display: inline-block;
   padding: 10px 20px;
-  border-radius: 4px;
+  color: white;
+  background-color: #007bff;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
 }
 
-.btn:hover {
+.btn-primary:hover {
   background-color: #0056b3;
 }

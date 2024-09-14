@@ -3,62 +3,195 @@
       {
         "id": 1,
         "title": "Android Developer",
-        "description": "DevSchool",
+        "description": "Pelatihan untuk menjadi Android Developer profesional.",
         "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/How_to_Become_an_Android_Developer.jpg",
         "altText": "Android Developer",
         "buttonText": "Lihat Detail Proyek",
         "buttonUrl": "program-detail.html?id=1",
-        "details": "Program pelatihan ini berfokus pada pengembangan aplikasi Android menggunakan Kotlin, Android Studio, dan berbagai teknologi modern."
+        "details": {
+          "kurikulum": [
+            "Pengenalan Android dan Java",
+            "Pengembangan Aplikasi Sederhana",
+            "Penyimpanan Data dan Database",
+            "Integrasi API",
+            "Pengembangan Aplikasi Kompleks"
+          ],
+          "jadwal": "6 Bulan (Setiap Sabtu dan Minggu)",
+          "pelatih": [
+            {
+              "nama": "Budi Santoso",
+              "jabatan": "Senior Android Developer",
+              "pengalaman": "10 tahun pengalaman di industri Android Development"
+            },
+            {
+              "nama": "Siti Nurhaliza",
+              "jabatan": "Mobile App Architect",
+              "pengalaman": "8 tahun pengalaman di pengembangan aplikasi mobile"
+            }
+          ],
+          "biaya": "Rp 5.000.000,-",
+          "syarat": "Dasar pemrograman Java atau Kotlin."
+        }
       },
       {
         "id": 2,
         "title": "Front-End Developer",
-        "description": "DevSchool",
+        "description": "Pelatihan untuk menjadi Front-End Developer profesional.",
         "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Become_a_Front_End_Developer.jpg",
         "altText": "Front-End Developer",
         "buttonText": "Lihat Detail Proyek",
         "buttonUrl": "program-detail.html?id=2",
-        "details": "Program ini fokus pada pengembangan antarmuka pengguna untuk web. Anda akan mempelajari HTML, CSS, JavaScript, dan framework modern seperti React. Program ini juga mencakup desain responsif dan pengujian UI."
+        "details": {
+          "kurikulum": [
+            "HTML, CSS, dan JavaScript",
+            "Framework React dan Vue",
+            "Desain Responsif dan UI/UX",
+            "Pengujian dan Debugging",
+            "Pengembangan Aplikasi Web Modern"
+          ],
+          "jadwal": "4 Bulan (Setiap Senin hingga Jumat)",
+          "pelatih": [
+            {
+              "nama": "Ahmad Fauzi",
+              "jabatan": "Lead Front-End Developer",
+              "pengalaman": "8 tahun pengalaman di pengembangan front-end"
+            }
+          ],
+          "biaya": "Rp 4.000.000,-",
+          "syarat": "Dasar HTML, CSS, dan JavaScript."
+        }
       },
       {
         "id": 3,
         "title": "Back-End Developer",
-        "description": "DevSchool",
+        "description": "Pelatihan pengembangan sisi server dan basis data menggunakan teknologi modern.",
         "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOgieFCETcJfdQyFGDdZwbG1B3t8UrqFYltQ&s",
-        "altText": "Back-end Developer",
+        "altText": "Back-End Developer",
         "buttonText": "Lihat Detail Proyek",
         "buttonUrl": "program-detail.html?id=3",
-        "details": "Pelatihan ini mencakup pengembangan sisi server, basis data, dan API. Anda akan belajar menggunakan Node.js, Express, serta database SQL dan NoSQL untuk membangun aplikasi yang skalabel."
+        "details": {
+          "kurikulum": [
+            "Pengenalan Back-End Development",
+            "Node.js dan Express",
+            "Database SQL dan NoSQL",
+            "Pengelolaan API dan Middleware",
+            "Penerapan Keamanan di Back-End"
+          ],
+          "jadwal": "5 Bulan (Setiap Sabtu dan Minggu)",
+          "pelatih": [
+            {
+              "nama": "Agus Wiryawan",
+              "jabatan": "Senior Back-End Developer",
+              "pengalaman": "12 tahun di industri pengembangan Back-End"
+            },
+            {
+              "nama": "Lisa Maulida",
+              "jabatan": "Database Architect",
+              "pengalaman": "10 tahun di bidang desain dan pengelolaan basis data"
+            }
+          ],
+          "biaya": "Rp 6.000.000,-",
+          "syarat": "Pemahaman dasar tentang JavaScript dan REST API."
+        }
       },
       {
         "id": 4,
         "title": "IOS Developer",
-        "description": "DevSchool",
+        "description": "Pelatihan mendalam tentang pengembangan aplikasi iOS menggunakan Swift dan Xcode.",
         "imageUrl": "https://www.simplilearn.com/ice9/free_resources_article_thumb/Skills_Required_to_Become_an_iOS_Developer.jpg",
         "altText": "IOS Developer",
         "buttonText": "Lihat Detail Proyek",
         "buttonUrl": "program-detail.html?id=4",
-        "details": "Program ini memberikan pengetahuan mendalam tentang pengembangan aplikasi iOS menggunakan Swift dan Xcode. Anda akan belajar tentang antarmuka pengguna, penyimpanan data, dan distribusi aplikasi melalui App Store."
+        "details": {
+          "kurikulum": [
+            "Pengenalan iOS Development",
+            "Bahasa Pemrograman Swift",
+            "Pembuatan Antarmuka Pengguna dengan UIKit",
+            "Manajemen Penyimpanan Data di iOS",
+            "Distribusi Aplikasi ke App Store"
+          ],
+          "jadwal": "4 Bulan (Setiap Sabtu)",
+          "pelatih": [
+            {
+              "nama": "Andi Pratama",
+              "jabatan": "Lead iOS Developer",
+              "pengalaman": "8 tahun di industri pengembangan aplikasi iOS"
+            },
+            {
+              "nama": "Rina Widjaya",
+              "jabatan": "Mobile App Designer",
+              "pengalaman": "7 tahun di bidang desain aplikasi mobile"
+            }
+          ],
+          "biaya": "Rp 7.000.000,-",
+          "syarat": "Pemahaman dasar Swift dan Xcode."
+        }
       },
       {
         "id": 5,
         "title": "Machine Learning Engineer",
-        "description": "DevSchool",
+        "description": "Pelatihan untuk menjadi ahli dalam penerapan pembelajaran mesin menggunakan pustaka dan algoritma modern.",
         "imageUrl": "https://www.discoverdatascience.org/wp-content/uploads/2023/10/programmer-using-ai.jpg",
         "altText": "Machine Learning Engineer",
         "buttonText": "Lihat Detail Proyek",
         "buttonUrl": "program-detail.html?id=5",
-        "details": "Pelatihan ini fokus pada penerapan teknik pembelajaran mesin untuk memecahkan masalah dunia nyata. Anda akan mempelajari algoritma pembelajaran mesin, analisis data, dan penggunaan pustaka seperti TensorFlow dan scikit-learn."
+        "details": {
+          "kurikulum": [
+            "Dasar-dasar Pembelajaran Mesin",
+            "Algoritma Supervised dan Unsupervised Learning",
+            "Pemrograman Python untuk Pembelajaran Mesin",
+            "Penggunaan TensorFlow dan scikit-learn",
+            "Penerapan Model Machine Learning di Dunia Nyata"
+          ],
+          "jadwal": "6 Bulan (Setiap Sabtu dan Minggu)",
+          "pelatih": [
+            {
+              "nama": "Eka Suharto",
+              "jabatan": "Senior Machine Learning Engineer",
+              "pengalaman": "10 tahun di bidang AI dan Machine Learning"
+            },
+            {
+              "nama": "Nur Aini",
+              "jabatan": "Data Scientist",
+              "pengalaman": "7 tahun di bidang pembelajaran mesin dan analisis data"
+            }
+          ],
+          "biaya": "Rp 9.000.000,-",
+          "syarat": "Pemahaman dasar Python dan statistik."
+        }
       },
       {
         "id": 6,
         "title": "Data Scientist",
-        "description": "DevSchool",
+        "description": "Pelatihan ini fokus pada pengolahan dan analisis data besar serta pembuatan laporan dan visualisasi.",
         "imageUrl": "https://mmc.tirto.id/image/otf/640x0/2020/05/08/istock-1146417905_ratio-16x9.jpg",
         "altText": "Data Scientist",
         "buttonText": "Lihat Detail Proyek",
         "buttonUrl": "program-detail.html?id=6",
-        "details": "Pelatihan ini dirancang untuk membekali Anda dengan keterampilan analisis data dan visualisasi. Anda akan mempelajari teknik statistik, analisis data besar, dan pembuatan laporan serta dasbor interaktif."
+        "details": {
+          "kurikulum": [
+            "Dasar-Dasar Ilmu Data",
+            "Teknik Analisis Data dan Statistik",
+            "Pemrograman Python dan R untuk Analisis Data",
+            "Big Data dan Teknologi Hadoop",
+            "Pembuatan Laporan dan Visualisasi dengan Tableau"
+          ],
+          "jadwal": "6 Bulan (Setiap Sabtu)",
+          "pelatih": [
+            {
+              "nama": "Sofyan Hadi",
+              "jabatan": "Lead Data Scientist",
+              "pengalaman": "10 tahun di industri Data Science dan Big Data"
+            },
+            {
+              "nama": "Mira Putri",
+              "jabatan": "Data Analyst",
+              "pengalaman": "6 tahun di bidang analisis data dan visualisasi"
+            }
+          ],
+          "biaya": "Rp 8.500.000,-",
+          "syarat": "Pemahaman dasar statistik dan Python."
+        }
       }
     ]
   }

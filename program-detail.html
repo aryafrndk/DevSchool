@@ -40,145 +40,94 @@
       </div>
     </header>
 
-    <section id="program-detail" class="program-detail-section">
-      <div class="container">
-        <img id="program-img" class="program-img" src="" alt="Program Image" />
-        <div class="program-info">
-          <h2 id="program-title" class="program-title"></h2>
-          <p id="program-description" class="program-description"></p>
-          <p id="program-details" class="program-details"></p>
-          <a href="index.html" class="btn btn-primary">Kembali ke Program</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="footer-container">
-        <div class="footer-about">
-          <h3>Tentang DevSchool</h3>
-          <p>
-            DevSchool adalah platform pembelajaran daring yang bertujuan untuk
-            mengembangkan keterampilan software engineering. Kami menawarkan
-            berbagai program pelatihan untuk membantu Anda menjadi developer
-            yang handal.
-          </p>
-        </div>
-
-        <div class="footer-links">
-          <h3>Menu</h3>
-          <ul>
-            <li><a href="index.html#program">Program Pelatihan</a></li>
-            <li><a href="index.html#informasi">Informasi Pelatihan</a></li>
-            <li><a href="index.html#berita">Berita dan Artikel</a></li>
-            <li><a href="index.html#galeri">Galeri</a></li>
-            <li><a href="index.html#testimonial">Testimonial</a></li>
-            <li><a href="index.html#kontak">Kontak</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-social">
-          <h3>Ikuti Kami</h3>
-          <ul>
-            <li>
-              <a href="#"
-                ><img src="assets/facebook.svg" alt="Facebook" /> Facebook</a
-              >
-            </li>
-            <li>
-              <a href="#"
-                ><img src="assets/instagram.svg" alt="Instagram" /> Instagram</a
-              >
-            </li>
-            <li>
-              <a href="#"><img src="assets/x.svg" alt="X" /> X</a>
-            </li>
-            <li>
-              <a href="#"
-                ><img src="assets/linkedin.svg" alt="LinkedIn" /> LinkedIn</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <!-- Address Section -->
-        <div class="footer-address">
-          <h3>Kontak Kami</h3>
-          <address>
-            <p>
-              <strong>Alamat:</strong> Jl. Teknologi No. 456, Bandung, Indonesia
-            </p>
-            <p>
-              <strong>Email:</strong>
-              <a href="mailto:info@devschool.com">info@devschool.com</a>
-            </p>
-            <p><strong>Telepon:</strong> +62 21 7890 1234</p>
-          </address>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2024 DevSchool. All Rights Reserved.</p>
-      </div>
-    </footer>
+    <div id="programDetail" class="program-detail-container">
+      <a href="index.html" class="btn-primary">Back to Programs</a>
+    </div>
 
     <script>
-      // Fetch programs.json data
-      async function fetchPrograms() {
-        const response = await fetch("data/programs.json");
-        const programs = await response.json();
-        return programs.programs;
-      }
-
-      // Display program detail on program-detail.html
-      async function displayProgramDetail() {
+      document.addEventListener("DOMContentLoaded", function () {
         const urlParams = new URLSearchParams(window.location.search);
-        const programId = urlParams.get("id");
-        const programs = await fetchPrograms();
+        const id = urlParams.get("id");
 
-        const program = programs.find((prog) => prog.id == programId);
+        fetch("data/programs.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const program = data.programs.find((p) => p.id == id);
+            if (program) {
+              const container = document.getElementById("programDetail");
+              const pelatihList = program.details.pelatih
+                .map(
+                  (pelatih) => `
+                <li>
+                  <strong>${pelatih.nama}</strong> - ${pelatih.jabatan}, ${pelatih.pengalaman}
+                </li>
+              `
+                )
+                .join("");
 
-        if (program) {
-          document.getElementById("program-img").src = program.imageUrl;
-          document.getElementById("program-img").alt = program.altText;
-          document.getElementById("program-title").textContent = program.title;
-          document.getElementById("program-description").textContent =
-            program.description;
-          document.getElementById("program-details").textContent =
-            program.details;
-        } else {
-          document.getElementById("program-title").textContent =
-            "Program not found.";
-        }
-      }
+              const kurikulumList = program.details.kurikulum
+                .map((kurikulum) => `<li>${kurikulum}</li>`)
+                .join("");
 
-      // Display programs on index.html
-      async function displayPrograms() {
-        const programs = await fetchPrograms();
-        const programCardsContainer = document.getElementById("programCards");
+              container.innerHTML = `
+              <div class="border-box">
+                <h2>${program.title}</h2>
+                <img src="${program.imageUrl}" alt="${program.altText}" class="program-detail-img" />
+              </div>
 
-        programs.forEach((program) => {
-          const card = document.createElement("div");
-          card.classList.add("card");
+              <div class="border-box">
+                <h3>Description</h3>
+                <p>${program.description}</p>
+              </div>
 
-          card.innerHTML = `
-      <img src="${program.imageUrl}" class="card-img-top" alt="${program.altText}" />
-      <div class="card-body">
-        <h5 class="card-title">${program.title}</h5>
-        <p class="card-text">${program.description}</p>
-        <a href="${program.buttonUrl}" class="btn btn-primary">${program.buttonText}</a>
-      </div>
-    `;
+              <div class="border-box">
+                <h3>Kurikulum</h3>
+                <ul>${kurikulumList}</ul>
+              </div>
 
-          programCardsContainer.appendChild(card);
-        });
-      }
+              <div class="border-box">
+                <h3>Jadwal</h3>
+                <p>${program.details.jadwal}</p>
+              </div>
 
-      // Check if we are on the program-detail.html page
-      if (window.location.pathname.includes("program-detail.html")) {
-        displayProgramDetail();
-      } else {
-        displayPrograms();
-      }
+              <div class="border-box">
+                <h3>Biaya</h3>
+                <p>${program.details.biaya}</p>
+              </div>
+
+              <div class="border-box">
+                <h3>Pelatih</h3>
+                <ul>${pelatihList}</ul>
+              </div>
+
+              <div class="border-box">
+                <h3>Syarat</h3>
+                <p>${program.details.syarat}</p>
+              </div>
+
+              <a href="" class="btn-primary">Daftar Program</a>
+            `;
+            } else {
+              document.getElementById(
+                "programDetail"
+              ).innerHTML = `<p>Program not found.</p>`;
+            }
+          })
+          .catch((error) =>
+            console.error("Error fetching the JSON data:", error)
+          );
+      });
+    </script>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script>
+      fetch("components/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
     </script>
   </body>
 </html>
