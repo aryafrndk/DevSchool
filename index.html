@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
     <link rel="stylesheet" href="/styles/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -18,27 +19,7 @@
 
   <body>
     <!-- Header Section -->
-    <header>
-      <div class="nav-container">
-        <a href="index.html" class="logo">
-          <img src="assets/A.png" alt="DevSchool Logo" />
-        </a>
-        <nav>
-          <ul>
-            <li><a href="#program">Program Pelatihan</a></li>
-            <li><a href="#informasi">Informasi Pelatihan</a></li>
-            <li><a href="#berita">Berita dan Artikel</a></li>
-            <li><a href="#galeri">Galeri</a></li>
-            <li><a href="#testimonial">Testimonial</a></li>
-            <li><a href="#kontak">Kontak</a></li>
-          </ul>
-        </nav>
-        <div class="auth-buttons">
-          <a href="masuk.html"><button class="btn-masuk">Masuk</button></a>
-          <a href="daftar.html"><button class="btn-daftar">Daftar</button></a>
-        </div>
-      </div>
-    </header>
+    <header id="header"></header>
 
     <!-- Profil DevSchool -->
     <section id="profil">
@@ -350,56 +331,11 @@
 
     <!-- Footer -->
     <div id="footer"></div>
-    <script>
-      fetch("components/footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer").innerHTML = data;
-        })
-        .catch((error) => console.error("Error loading footer:", error));
-    </script>
-
-    <script>
-      let slideIndex = 0;
-      showSlides();
-
-      function showSlides() {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-          slideIndex = 1;
-        }
-        slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 7000);
-      }
-
-      function plusSlides(n) {
-        showSlides((slideIndex += n));
-      }
-
-      let currentSlide = 0;
-
-      function moveSlide(step) {
-        const slides = document.querySelectorAll(".carousel-slide");
-        const totalSlides = slides.length;
-        const slidesToShow = 3;
-        const maxSlides = totalSlides - slidesToShow;
-
-        currentSlide =
-          (currentSlide + step + (maxSlides + 1)) % (maxSlides + 1);
-        const offset = -currentSlide * (100 / slidesToShow);
-        document.querySelector(
-          ".carousel"
-        ).style.transform = `translateX(${offset}%)`;
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        moveSlide(0);
-      });
-    </script>
   </body>
+
+    <script src="scripts/header.js"></script> 
+    <script src="scripts/footer.js"></script>
+    <script src="scripts/login.js"></script>
+    <script src="scripts/slidefoto.js"></script> 
+
 </html>

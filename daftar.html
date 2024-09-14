@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DevSchool Indonesia</title>
     <link rel="stylesheet" href="styles/daftar.css" />
+    <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -13,27 +14,7 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header>
-      <div class="nav-container">
-        <a href="index.html" class="logo">
-          <img src="assets/A.png" alt="DevSchool Logo" />
-        </a>
-        <nav>
-          <ul>
-            <li><a href="index.html#program ">Program Pelatihan</a></li>
-            <li><a href="index.html#informasi">Informasi Pelatihan</a></li>
-            <li><a href="index.html#berita">Berita dan Artikel</a></li>
-            <li><a href="index.html#galeri">Galeri</a></li>
-            <li><a href="index.html#testimonial">Testimonial</a></li>
-            <li><a href="index.html#kontak">Kontak</a></li>
-          </ul>
-        </nav>
-        <div class="auth-buttons">
-          <a href="masuk.html"><button class="btn-masuk">Masuk</button></a>
-          <a href="daftar.html"><button class="btn-daftar">Daftar</button></a>
-        </div>
-      </div>
-    </header>
+    <header id="header"></header>
 
     <!-- Daftar Section -->
     <section id="daftar">
@@ -101,14 +82,7 @@
 
     <!-- Footer -->
     <div id="footer"></div>
-    <script>
-      fetch("components/footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer").innerHTML = data;
-        })
-        .catch((error) => console.error("Error loading footer:", error));
-    </script>
+    <script src="scripts/footer.js"></script>
 
     <script>
       const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
@@ -143,4 +117,5 @@
       });
     </script>
   </body>
+  <script src="scripts/header.js"></script>
 </html>
