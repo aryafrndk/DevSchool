@@ -1,21 +1,19 @@
-document
-  .getElementById("loginForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const errorMessage = document.getElementById("error-message");
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const errorMessage = document.getElementById("error-message");
 
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
+  // Dummy login validation (for demonstration)
+  if (email === "test@example.com" && password === "123") {
+    // Store login state in localStorage
+    localStorage.setItem("isLoggedIn", true);
 
-    const user = existingUsers.find(
-      (user) => user.email === email && user.password === password
-    );
-    if (user) {
-      window.location.href = "index.html";
-    } else {
-      errorMessage.textContent =
-        "Email atau kata sandi salah. Silakan coba lagi.";
-    }
-  });
+    // Redirect to home page or reload the current page
+    window.location.href = "index.html"; // Change the URL if needed
+  } else {
+    // Show error message
+    errorMessage.textContent = "Email atau kata sandi salah.";
+  }
+});
