@@ -14,15 +14,21 @@
       </ul>
     </nav>
     <div class="auth-buttons">
-      <!-- Buttons for login and registration -->
       <a href="masuk.html" id="btn-masuk"><button class="btn-masuk">Masuk</button></a>
       <a href="daftar.html" id="btn-daftar"><button class="btn-daftar">Daftar</button></a>
 
-      <!-- User icon (hidden by default) -->
       <div class="user-icon" id="user-icon" style="display: none;">
-        <a href="profile.html">
+        <a href="#" id="user-icon-link">
           <img src="assets/user.svg" alt="User Icon" style="width: 40px;" />
         </a>
+        <!-- Dropdown Menu -->
+        <div class="dropdown-menu" id="dropdown-menu">
+          <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="settings.html">Pengaturan</a></li>
+            <li><a href="#" id="logout">Logout</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

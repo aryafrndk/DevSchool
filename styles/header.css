@@ -1,72 +1,149 @@
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #fff;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-  }
-  
-  .logo {
-    margin-left: 50px;
-  }
-  
-  .logo img {
-    height: 50px;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  header nav ul li {
-    margin-right: 20px;
-  }
-  
-  header nav ul li a {
-    color: #333;
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    transition: background 0.3s;
-  }
-  
-  header nav ul li a:hover {
-    background: #d3d3d3;
-  }
-  
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+  background: #d3d3d3;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-masuk,
+.btn-daftar {
+  background: #fff;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-daftar {
+  background: #666661;
+  color: white;
+}
+
+.btn-masuk:hover {
+  background: #666666;
+}
+
+.btn-daftar:hover {
+  background: #424242;
+}
+
+/* Style for the user icon */
+.user-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 30px;
+}
+
+.user-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid black; 
+  padding: 2px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: none;
+  width: 150px;
+  z-index: 100;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu ul li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu ul li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu ul li a:hover {
+  background-color: #f4f4f4;
+  color: #007bff;
+}
+
+/* Show dropdown on user icon click */
+.user-icon.active .dropdown-menu {
+  display: block;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
   .auth-buttons {
-    display: flex;
-    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .btn-masuk,
-  .btn-daftar {
-    background: #fff;
-    color: black;
-    border: 1px solid black;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background 0.3s;
+
+  .auth-buttons a {
+    margin: 10px 0;
   }
-  
-  .btn-daftar {
-    background: #666661;
-    color: white;
+
+  .user-icon {
+    margin-left: 0;
   }
-  
-  .btn-masuk:hover {
-    background: #666666;
-  }
-  
-  .btn-daftar:hover {
-    background: #424242;
-  }
+}
