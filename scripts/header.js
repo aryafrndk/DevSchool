@@ -4,7 +4,6 @@ fetch("components/header.html")
   .then((data) => {
     document.getElementById("header").innerHTML = data;
 
-    // Check login status after the header is loaded
     const isLoggedIn = localStorage.getItem('isLoggedIn');
 
     if (isLoggedIn) {
@@ -26,7 +25,10 @@ fetch("components/header.html")
       dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
     });
 
-    // Close the dropdown if clicked outside
+    dropdownMenu.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
+
     document.addEventListener('click', function (event) {
       if (!userIcon.contains(event.target)) {
         dropdownMenu.style.display = 'none';
@@ -34,10 +36,10 @@ fetch("components/header.html")
       }
     });
 
-    // Example of logout functionality
     document.getElementById('logout').addEventListener('click', function() {
       localStorage.removeItem('isLoggedIn'); 
       window.location.href = 'masuk.html'; 
     });
   })
+  
   .catch((error) => console.error("Error loading header:", error));

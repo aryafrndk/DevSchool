@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.settings-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f1f3f5;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.profile-settings {
+  flex-grow: 1;
+  padding: 40px;
+  background-color: #fff;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Gender Dropdown Styling */
+.form-group select {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Focused and Hovered Styles */
+.form-group select:focus {
+  border-color: #6c63ff; /* Change to your theme's color */
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.3); /* Slight glow effect */
+}
+
+.form-group select:hover {
+  border-color: #888;
+}
+
+/* Option Styling */
+.form-group select option {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Select Icon Styling */
+.form-group select {
+  -webkit-appearance: none; /* For Safari */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* Default for all */
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI0IiB2aWV3Qm94PSIwIDAgOCA0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xLjAyMSA1Qy4zMjU1IDUgLS4wNjczNzUgNS40NTAxIC4yMTg5MSA1LjkxMDhMMy45MTg5IDExLjQ5YzAuMjg0NjIuNDYwOC43MTMwNi43NTk3IDEuMTQxMS43NTk3aDUuMzg2OGMuNDI1NSAwIC44NTI2Mi0uMjk5MiAxLjEzNjYtLjc1OTdMMTEuNjA1IDUuOTEwOEMxMi4zMzcgNS40NTAxIDEyLjA0NSA1IDExLjM4IDVIMSIgc3Ryb2tlPSIjMkYyRkJCIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 15px;
+  cursor: pointer;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group select::-ms-expand {
+  display: none; /* Remove dropdown icon in IE */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+.profile-pic {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-pic button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-pic p {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.editor-toolbar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.editor-toolbar button {
+  background-color: #f1f3f5;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}

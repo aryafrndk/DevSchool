@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Settings - DevSchool</title>
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/profile-settings.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header id="header"></header>
+
+    <div class="settings-container">
+      <!-- Sidebar Menu -->
+      <nav class="sidebar">
+        <ul>
+          <li><a href="#">Profil</a></li>
+          <li><a href="#">Data Pribadi</a></li>
+          <li><a href="#">Akun</a></li>
+          <li><a href="#">Academy</a></li>
+          <li><a href="#">Email Langganan</a></li>
+        </ul>
+      </nav>
+
+      <!-- Profile Settings Section -->
+      <section class="profile-settings">
+        <h2>Profil Pengguna</h2>
+        <form>
+          <!-- Upload Foto Diri -->
+          <div class="profile-pic">
+            <img
+              src="assets/user.svg"
+              alt="Profile Picture"
+              id="profile-pic-preview"
+            />
+            <button type="button" id="upload-btn">Pilih Foto</button>
+            <input type="file" id="profile-pic-input" style="display: none" />
+            <p>
+              Gambar profile Anda sebaiknya memiliki rasio 1:1 dan berukuran
+              tidak lebih dari 2MB.
+            </p>
+          </div>
+
+          <!-- Nama Lengkap -->
+          <div class="form-group">
+            <label for="full-name">Nama Lengkap *</label>
+            <input type="text" id="full-name" required />
+          </div>
+
+          <!-- Jenis Kelamin -->
+          <div class="form-group">
+            <label for="gender">Jenis Kelamin *</label>
+            <select id="gender" required>
+              <option value="pria">Pria</option>
+              <option value="wanita">Wanita</option>
+            </select>
+          </div>
+
+          <!-- Tempat, Tanggal Lahir -->
+          <div class="form-group">
+            <label for="birth-place">Tempat Lahir *</label>
+            <input type="text" id="birth-place" required />
+          </div>
+
+          <div class="form-group">
+            <label for="birth-date">Tanggal Lahir *</label>
+            <input type="date" id="birth-date" required />
+          </div>
+
+          <!-- Alamat -->
+          <div class="form-group">
+            <label for="address">Alamat *</label>
+            <textarea id="address" required></textarea>
+          </div>
+
+          <!-- No HP -->
+          <div class="form-group">
+            <label for="phone-number">No HP *</label>
+            <input type="tel" id="phone-number" required />
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" required />
+          </div>
+
+          <!-- Hobi -->
+          <div class="form-group">
+            <label for="hobbies">Hobi</label>
+            <input type="text" id="hobbies" placeholder="Contoh: Memasak, Olahraga" />
+          </div>
+
+          <!-- Tentang Saya -->
+          <div class="form-group">
+            <label for="about-me">Tentang Saya</label>
+            <textarea
+              id="about-me"
+              placeholder="Tulis cerita singkat tentang diri Anda"
+            ></textarea>
+          </div>
+
+          <!-- Save Button -->
+          <button type="button" id="save-btn" class="save-btn">Simpan Perubahan</button>
+        </form>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <script src="scripts/profile-settings.js"></script>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/footer.js"></script>
+  </body>
+</html>

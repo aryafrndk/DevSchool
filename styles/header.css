@@ -130,6 +130,7 @@ header nav ul li a:hover {
 /* Show dropdown on user icon click */
 .user-icon.active .dropdown-menu {
   display: block;
+  border-radius: 10px;
 }
 
 /* Responsive behavior */
