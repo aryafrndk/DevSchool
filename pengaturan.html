@@ -18,83 +18,72 @@
 
     <div class="settings-container">
       <!-- Sidebar Menu -->
-      <nav class="sidebar">
+      <nav class="sidebar"> 
         <ul>
           <li><a href="#">Profil</a></li>
-          <li><a href="#">Data Pribadi</a></li>
-          <li><a href="#">Akun</a></li>
-          <li><a href="#">Academy</a></li>
-          <li><a href="#">Email Langganan</a></li>
         </ul>
       </nav>
 
       <!-- Profile Settings Section -->
       <section class="profile-settings">
         <h2>Profil Pengguna</h2>
-        <form>
+        <form action="php/process.php" method="POST" enctype="multipart/form-data">
           <!-- Upload Foto Diri -->
           <div class="profile-pic">
-            <img
-              src="assets/user.svg"
-              alt="Profile Picture"
-              id="profile-pic-preview"
-            />
-            <button type="button" id="upload-btn">Pilih Foto</button>
-            <input type="file" id="profile-pic-input" style="display: none" />
-            <p>
-              Gambar profile Anda sebaiknya memiliki rasio 1:1 dan berukuran
-              tidak lebih dari 2MB.
-            </p>
+            <img src="assets/user.svg" alt="Profile Picture" id="profile-pic-preview" />
+            <input type="file" id="profile-pic-input" name="profile-pic" />
+            <p>Gambar profile Anda sebaiknya memiliki rasio 1:1 dan berukuran tidak lebih dari 2MB.</p>
           </div>
-
+                          
           <!-- Nama Lengkap -->
           <div class="form-group">
             <label for="full-name">Nama Lengkap *</label>
-            <input type="text" id="full-name" required />
+            <input type="text" id="full-name" name="full-name" autocomplete="name" required />
           </div>
 
           <!-- Jenis Kelamin -->
           <div class="form-group">
             <label for="gender">Jenis Kelamin *</label>
-            <select id="gender" required>
+            <select id="gender" name="gender" required>
               <option value="pria">Pria</option>
               <option value="wanita">Wanita</option>
             </select>
           </div>
 
-          <!-- Tempat, Tanggal Lahir -->
+          <!-- Tempat Lahir -->
           <div class="form-group">
             <label for="birth-place">Tempat Lahir *</label>
-            <input type="text" id="birth-place" required />
+            <input type="text" id="birth-place" name="birth-place" required />
           </div>
 
+          <!-- Tanggal Lahir -->
           <div class="form-group">
             <label for="birth-date">Tanggal Lahir *</label>
-            <input type="date" id="birth-date" required />
+            <input type="date" id="birth-date" name="birth-date" required />
           </div>
 
           <!-- Alamat -->
           <div class="form-group">
             <label for="address">Alamat *</label>
-            <textarea id="address" required></textarea>
+            <textarea id="address" name="address" required></textarea>
           </div>
 
           <!-- No HP -->
           <div class="form-group">
             <label for="phone-number">No HP *</label>
-            <input type="tel" id="phone-number" required />
+            <input type="tel" id="phone-number" name="phone-number" required />
           </div>
 
           <!-- Email -->
           <div class="form-group">
             <label for="email">Email *</label>
-            <input type="email" id="email" required />
+            <input type="email" id="email" name="email" autocomplete="email" required />
           </div>
 
           <!-- Hobi -->
           <div class="form-group">
             <label for="hobbies">Hobi</label>
-            <input type="text" id="hobbies" placeholder="Contoh: Memasak, Olahraga" />
+            <input type="text" id="hobbies" name="hobbies" placeholder="Contoh: Memasak, Olahraga" />
           </div>
 
           <!-- Tentang Saya -->
@@ -102,12 +91,13 @@
             <label for="about-me">Tentang Saya</label>
             <textarea
               id="about-me"
+              name="about-me"
               placeholder="Tulis cerita singkat tentang diri Anda"
             ></textarea>
           </div>
 
           <!-- Save Button -->
-          <button type="button" id="save-btn" class="save-btn">Simpan Perubahan</button>
+          <button type="submit" id="save-btn" class="save-btn">Simpan Perubahan</button>
         </form>
       </section>
     </div>
