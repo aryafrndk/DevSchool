@@ -7,10 +7,18 @@
     <link rel="stylesheet" href="styles/header.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/profile-settings.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+    <style>
+      .registration-card {
+        padding: 20px;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
     <!-- Header Section -->
@@ -18,7 +26,7 @@
 
     <div class="settings-container">
       <!-- Sidebar Menu -->
-      <nav class="sidebar"> 
+      <nav class="sidebar">
         <ul>
           <li><a href="#">Profil</a></li>
         </ul>
@@ -27,18 +35,33 @@
       <!-- Profile Settings Section -->
       <section class="profile-settings">
         <h2>Profil Pengguna</h2>
-        <form action="php/process.php" method="POST" enctype="multipart/form-data">
+        <form
+          id="profileForm"
+          action="php/process.php"
+          method="POST"
+          enctype="multipart/form-data"
+        >
           <!-- Upload Foto Diri -->
           <div class="profile-pic">
-            <img src="assets/user.svg" alt="Profile Picture" id="profile-pic-preview" />
+            <img src="assets/user.svg" alt="Profile Picture" id="profile-pic" />
             <input type="file" id="profile-pic-input" name="profile-pic" />
-            <p>Gambar profile Anda sebaiknya memiliki rasio 1:1 dan berukuran tidak lebih dari 2MB.</p>
+
+            <p>
+              Gambar profile Anda sebaiknya memiliki rasio 1:1 dan berukuran
+              tidak lebih dari 2MB.
+            </p>
           </div>
-                          
+
           <!-- Nama Lengkap -->
           <div class="form-group">
             <label for="full-name">Nama Lengkap *</label>
-            <input type="text" id="full-name" name="full-name" autocomplete="name" required />
+            <input
+              type="text"
+              id="full-name"
+              name="full-name"
+              autocomplete="name"
+              required
+            />
           </div>
 
           <!-- Jenis Kelamin -->
@@ -77,13 +100,24 @@
           <!-- Email -->
           <div class="form-group">
             <label for="email">Email *</label>
-            <input type="email" id="email" name="email" autocomplete="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              required
+            />
           </div>
 
           <!-- Hobi -->
           <div class="form-group">
             <label for="hobbies">Hobi</label>
-            <input type="text" id="hobbies" name="hobbies" placeholder="Contoh: Memasak, Olahraga" />
+            <input
+              type="text"
+              id="hobbies"
+              name="hobbies"
+              placeholder="Contoh: Memasak, Olahraga"
+            />
           </div>
 
           <!-- Tentang Saya -->
@@ -97,9 +131,54 @@
           </div>
 
           <!-- Save Button -->
-          <button type="submit" id="save-btn" class="save-btn">Simpan Perubahan</button>
+          <button type="submit" name="save" class="save-btn">
+            Simpan Perubahan
+          </button>
+          <button type="button" class="view-card" onclick="openModal();">
+            Lihat Kartu
+          </button>
         </form>
       </section>
+    </div>
+
+    <div id="registrationModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img
+          id="profile-pic-display"
+          src="assets/user.svg"
+          alt="Foto Profil"
+          class="profile-pic"
+        />
+        <h2 id="name-display">Nama Tidak Ada</h2>
+        <p>
+          <strong>Jenis Kelamin:</strong>
+          <span id="gender-display">Tidak ada</span>
+        </p>
+        <p>
+          <strong>Tempat Lahir:</strong>
+          <span id="birth-place-display">Tidak ada</span>
+        </p>
+        <p>
+          <strong>Tanggal Lahir:</strong>
+          <span id="birth-date-display">Tidak ada</span>
+        </p>
+        <p>
+          <strong>Alamat:</strong> <span id="address-display">Tidak ada</span>
+        </p>
+        <p>
+          <strong>Nomor Telepon:</strong>
+          <span id="phone-number-display">Tidak ada</span>
+        </p>
+        <p><strong>Email:</strong> <span id="email-display">Tidak ada</span></p>
+        <p>
+          <strong>Hobi:</strong> <span id="hobbies-display">Tidak ada</span>
+        </p>
+        <p>
+          <strong>Tentang Saya:</strong>
+          <span id="about-me-display">Tidak ada</span>
+        </p>
+      </div>
     </div>
 
     <!-- Footer -->
