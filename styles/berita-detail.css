@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for berita detail */
+.detail-container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#berita-detail {
+    padding: 20px;
+}
+
+#berita-detail h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#berita-detail .category {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2ecc71;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+    text-align: center;
+}
+
+#berita-detail .release-date {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#berita-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 25px;
+}
+
+#berita-detail .content {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #34495e;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .detail-container {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    #berita-detail h1 {
+        font-size: 2rem;
+    }
+
+    #berita-detail .content {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,63 @@
+/* Sidebar Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display:flex
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px; /* Lebar sidebar */
+    background-color: #fff; /* Warna latar belakang sidebar */
+    padding: 20px 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan sidebar */
+    border-radius: 8px; /* Sudut melengkung */
+    top: 0;
+    height: auto; /* Tinggi menyesuaikan isi */
+    margin-right: 50px;   
+}
+
+/* Atur ul dan li agar tidak terlalu memanjang */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px; /* Sesuaikan jarak antar item */
+}
+
+/* Untuk memastikan link mengisi ruang penuh */
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 12px 15px;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.3s ease;
+}
+
+.sidebar ul li a.active {
+    background-color: black;
+    color: #fff;
+}
+
+/* Mengatur tinggi minimal agar tidak terlalu panjang */
+.sidebar ul li a {
+    min-height: 50px; /* Contoh tinggi minimal */
+}
+
+/* Contoh responsif untuk layar lebih kecil */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px; /* Sesuaikan lebar di layar kecil */
+    }
+}

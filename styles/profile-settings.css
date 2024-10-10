@@ -94,9 +94,9 @@ h2 {
 
 /* Select Icon Styling */
 .form-group select {
-  -webkit-appearance: none; /* For Safari */
-  -moz-appearance: none; /* For Firefox */
-  appearance: none; /* Default for all */
+  -webkit-appearance: none;
+  -moz-appearance: none; 
+  appearance: none; 
   background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI0IiB2aWV3Qm94PSIwIDAgOCA0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0xLjAyMSA1Qy4zMjU1IDUgLS4wNjczNzUgNS40NTAxIC4yMTg5MSA1LjkxMDhMMy45MTg5IDExLjQ5YzAuMjg0NjIuNDYwOC43MTMwNi43NTk3IDEuMTQxMS43NTk3aDUuMzg2OGMuNDI1NSAwIC44NTI2Mi0uMjk5MiAxLjEzNjYtLjc1OTdMMTEuNjA1IDUuOTEwOEMxMi4zMzcgNS40NTAxIDEyLjA0NSA1IDExLjM4IDVIMSIgc3Ryb2tlPSIjMkYyRkJCIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjwvc3ZnPg==');
   background-repeat: no-repeat;
   background-position: right 15px center;
@@ -109,7 +109,7 @@ h2 {
 }
 
 .form-group select::-ms-expand {
-  display: none; /* Remove dropdown icon in IE */
+  display: none; 
 }
 
 .form-group {
@@ -192,23 +192,23 @@ textarea {
 
 /* Modal */
 .modal {
-  display: none; /* Disembunyikan secara default */
+  display: none; 
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* Jika diperlukan */
-  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% dari atas dan ditengah */
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Lebar modal */
+  width: 80%; 
 }
 
 .close {

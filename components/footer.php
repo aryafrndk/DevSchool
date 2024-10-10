@@ -13,12 +13,12 @@
     <div class="footer-links">
       <h3>Menu</h3>
       <ul>
-        <li><a href="index.html#program">Program Pelatihan</a></li>
-        <li><a href="index.html#informasi">Informasi Pelatihan</a></li>
-        <li><a href="index.html#berita">Berita dan Artikel</a></li>
-        <li><a href="index.html#galeri">Galeri</a></li>
-        <li><a href="index.html#testimonial">Testimonial</a></li>
-        <li><a href="index.html#kontak">Kontak</a></li>
+        <li><a href="index.php#program">Program Pelatihan</a></li>
+        <li><a href="index.php#informasi">Informasi Pelatihan</a></li>
+        <li><a href="index.php#berita">Berita dan Artikel</a></li>
+        <li><a href="index.php#galeri">Galeri</a></li>
+        <li><a href="index.php#testimonial">Testimonial</a></li>
+        <li><a href="index.php#kontak">Kontak</a></li>
       </ul>
     </div>
 

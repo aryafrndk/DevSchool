@@ -57,7 +57,7 @@ document.getElementById('profileForm').addEventListener('submit', function(event
         // Update tampilan
         document.getElementById('name-display').innerText = fullName || 'Nama Tidak Ada';
         document.getElementById('gender-display').innerText = gender ? (gender === 'pria' ? 'Pria' : 'Wanita') : 'Tidak ada';
-        document.getElementById('birth-place-display').innerText = birthPlace || 'Tidak ada';
+        document.getElementById(  'birth-place-display').innerText = birthPlace || 'Tidak ada';
         document.getElementById('birth-date-display').innerText = birthDate || 'Tidak ada';
         document.getElementById('address-display').innerText = address || 'Tidak ada';
         document.getElementById('phone-number-display').innerText = phoneNumber || 'Tidak ada';

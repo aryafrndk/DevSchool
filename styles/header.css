@@ -43,6 +43,14 @@ header nav ul li a:hover {
   background: #d3d3d3;
 }
 
+.user-name {
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
 .auth-buttons {
   display: flex;
   gap: 10px;
@@ -65,6 +73,7 @@ header nav ul li a:hover {
 
 .btn-masuk:hover {
   background: #666666;
+  color:white
 }
 
 .btn-daftar:hover {
@@ -84,9 +93,11 @@ header nav ul li a:hover {
   height: 40px;
   border-radius: 50%;
   cursor: pointer;
-  border: 2px solid black; 
+  border: 2px solid black;
   padding: 2px;
+  object-fit: cover; 
 }
+
 
 /* Dropdown Menu */
 .dropdown-menu {
@@ -124,7 +135,6 @@ header nav ul li a:hover {
 
 .dropdown-menu ul li a:hover {
   background-color: #f4f4f4;
-  color: #007bff;
 }
 
 /* Show dropdown on user icon click */

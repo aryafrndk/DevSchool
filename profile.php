@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header id="header"></header>
+    <?php include 'components/header.php'; ?>
 
     <div class="settings-container">
       <!-- Sidebar Menu -->
@@ -182,7 +182,7 @@
     </div>
 
     <!-- Footer -->
-    <div id="footer"></div>
+    <?php include 'components/footer.php'; ?>
 
     <script src="scripts/profile-settings.js"></script>
     <script src="scripts/header.js"></script>

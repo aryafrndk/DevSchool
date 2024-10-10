@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -15,88 +16,65 @@ body {
 }
 
 /* Profil Section */
-#profil {
-  background: #fff;
+
+#profil .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px;
+}
+
+#profil .content {
+  display: flex;
+  align-items: center; 
+}
+
+#profil .text-container {
+  flex: 2; 
+  text-align: left; 
+  margin-right: 50px; 
+}
+
+#profil .title {
+  font-size: 36px;
   color: black;
-  padding: 60px 20px;
-  text-align: center;
+  margin-bottom: 10px;
 }
 
-#profil h2 {
-  margin-top: 30px;
-  margin-bottom: 30px;
+#profil .highlight {
+  font-weight: bold;
 }
 
-#profil h3 {
-  margin-top: 30px;
-}
-
-#profil p {
-  font-size: 1.2rem;
+#profil .description {
+  font-size: 18px;
+  color: #333;
   margin-bottom: 20px;
 }
 
-#profil strong {
-  font-weight: 600;
-  color: #ffdd57;
+#profil .image-container {
+  width: 300px; 
+  margin-left: 50px;
 }
 
-#profil button {
-  margin-top: 10px;
-  background-color: #666661;
-  color: #fff;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  font-family: "Poppins", sans-serif;
-}
-
-#profil button:hover {
-  background-color: #424242;
-}
-
-/* Skills List */
-#profil ul {
-  list-style: none;
-  padding: 0;
-  margin: 40px 0 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-#profil ul li {
-  background: #fff;
-  color: #333;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  margin-bottom: 50px;
-}
-
-#profil ul li:hover {
-  transform: translateY(-5px);
+#profil .main-image {
+  width: 100%; 
+  height: auto; 
 }
 
 /* Program Section */
 .program-section {
   text-align: center;
-  padding: 20px; /* Mengurangi padding keseluruhan */
+  padding: 20px;
+  border-radius: 4px;
 }
 
 #program .program-title {
-  font-size: 1.8rem; /* Mengecilkan ukuran judul */
+  font-size: 1.8rem; 
   margin-bottom: 10px;
   color: black;
 }
 
 #program .program-description {
-  font-size: 0.9rem; /* Mengecilkan ukuran deskripsi */
+  font-size: 0.9rem; 
   margin-bottom: 20px;
   color: black;
 }
@@ -105,16 +83,18 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px; /* Mengurangi jarak antar kartu */
+  gap: 10px; 
+  border-radius: 8px;
 }
 
 #program .card {
   background-color: #fff;
   border: 1px solid #ddd;
-  width: 20%; /* Mengecilkan lebar kartu */
+  width: 20%; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  margin-bottom: 10px; /* Mengurangi margin bawah kartu */
+  margin-bottom: 10px;
+  border-radius: 8px;
 }
 
 #program .card:hover {
@@ -123,31 +103,33 @@ body {
 
 #program .card-img-top {
   width: 100%;
-  height: 130px; /* Mengurangi tinggi gambar */
+  height: 130px;
   object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 #program .card-body {
-  padding: 8px; /* Mengurangi padding dalam kartu */
+  padding: 8px; 
   margin-bottom: 15px;
 }
 
 #program .card-title {
-  font-size: 1.1rem; /* Mengecilkan ukuran judul kartu */
-  margin-bottom: 6px;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
   color: black;
 }
 
 #program .card-text {
-  font-size: 0.85rem; /* Mengecilkan ukuran teks deskripsi */
-  margin-bottom: 10px;
+  font-size: 0.85rem; 
+  margin-bottom: 30px;
   color: black;
 }
 
 #program .btn-primary {
   background-color: white;
-  border: 1px solid black; /* Mengurangi ketebalan border */
-  padding: 6px 18px; /* Mengecilkan padding tombol */
+  border: 1px solid black; 
+  padding: 6px 18px; 
   border-radius: 4px;
   color: black;
   text-transform: uppercase;
@@ -163,13 +145,13 @@ body {
 /* Responsive layout Card */
 @media (max-width: 992px) {
   .card {
-    width: 38%; /* Mengecilkan kartu pada layar tablet besar */
+    width: 38%; 
   }
 }
 
 @media (max-width: 768px) {
   .card {
-    width: 100%; /* Full width pada layar kecil */
+    width: 100%; 
   }
 }
 
@@ -188,7 +170,7 @@ body {
 
 #benefits .benefits-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+  grid-template-columns: repeat(2, 1fr); 
   gap: 5px;
   justify-items: center;
   padding: 20px 100px;
@@ -238,78 +220,120 @@ body {
 
 @media (max-width: 768px) {
   #benefits .benefits-container {
-    grid-template-columns: 1fr; /* Satu kolom untuk layar kecil */
+    grid-template-columns: 1fr; 
   }
 }
 
 /* Berita dan Artikel Section */
 #berita {
-  background-color: #f4f4f4;
-  padding: 60px 20px;
-  color: #333;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #berita h2 {
-  font-size: 2.5rem;
-  color: black;
   text-align: center;
-  margin-bottom: 40px;
-  width: 100%;
-  position: relative;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-#berita h2::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  background: black;
-  margin: 10px auto 0;
+#berita .card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-#berita article {
+#berita .card {
   background: #fff;
-  padding: 20px 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  width: calc(50% - 15px);
-  box-sizing: border-box;
-}
-
-#berita article:hover {
-  transform: translateY(-5px);
-}
-
-#berita h3 {
-  font-size: 1.8rem;
-  color: black;
+  border-radius: 8px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex-basis: calc(33.333% - 30px);
+  margin: 0 15px;
+  transition: transform 0.2s;
   margin-bottom: 15px;
 }
 
-#berita p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 20px;
-  line-height: 1.6;
+#berita .card:hover {
+  transform: translateY(-5px);
 }
 
-#berita a {
-  font-size: 1rem;
-  color: #007bff;
+#berita .card-header {
+  margin-bottom: 10px;
+}
+
+#berita .category {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+#berita .card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+#berita .release-date {
+  font-size: 0.8em;
+  color: #666;
+  margin: 5px 0;
+}
+
+#berita .card-content {
+  margin-top: 10px;
+}
+
+#berita img {
+  width:  100%;               
+  height: 200px;        
+  object-fit: cover;
+  border-radius: 8px;   
+  margin-bottom: 15px;
+}
+
+#berita .read-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #666;
+  color: white;
   text-decoration: none;
-  border-bottom: 1px solid #007bff;
-  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
-#berita a:hover {
-  color: #0056b3;
-  border-bottom-color: #0056b3;
+#berita .read-more:hover {
+  background-color: black;
 }
+
+#berita .text-center {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#berita .lihat-semua-btn {
+  padding: 10px 25px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+#berita .lihat-semua-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+
 
 /* Galeri Foto */
 #galeri {
@@ -414,6 +438,7 @@ body {
   border-radius: 50%;
   display: block;
   margin: 0 auto 15px;
+  object-fit: cover; 
 }
 
 blockquote {
